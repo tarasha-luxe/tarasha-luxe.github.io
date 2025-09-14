@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #0f172a;
+      --bg2: #07103a;
+      --accent: #7c3aed;
+      --glass: rgba(255,255,255,0.06);
+      --muted: rgba(255,255,255,0.7);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent 8%),
+                  radial-gradient(900px 400px at 90% 90%, rgba(14,165,233,0.06), transparent 10%),
+                  linear-gradient(180deg,var(--bg1), var(--bg2));
+      color: #fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .card{
+      width:100%;
+      max-width:980px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:18px;
+      padding:40px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.04);
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:center;
+    }
+    .left h1{
+      margin:0 0 8px 0;
+      font-size:44px;
+      line-height:1.02;
+      letter-spacing:-0.02em;
+      font-weight:800;
+    }
+    .left p{margin:0 0 18px 0;color:var(--muted);font-size:16px}
+    .countdown{display:flex;gap:12px;margin-top:10px}
+    .timebox{background:var(--glass);padding:14px 16px;border-radius:12px;min-width:74px;text-align:center}
+    .timebox strong{display:block;font-size:20px;font-weight:700}
+    .timebox small{display:block;color:var(--muted);font-size:12px}
+
+    .moon{
+      width:100%;height:220px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;flex-direction:column
+    }
+
+    .right{display:flex;flex-direction:column;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:800}
+    .logo span{font-size:20px;color:white}
+    .subscribe{background:rgba(255,255,255,0.03);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .subscribe form{display:flex;gap:8px}
+    .subscribe input[type="email"]{flex:1;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;outline:none}
+    .subscribe button{padding:12px 14px;border-radius:8px;border:none;background:linear-gradient(90deg,var(--accent),#06b6d4);color:white;font-weight:700;cursor:pointer}
+    .social{display:flex;gap:10px;margin-top:8px}
+    .social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.02);text-decoration:none;color:inherit}
+    .footer{font-size:13px;color:var(--muted);margin-top:8px}
+
+    @media (max-width:880px){
+      .card{grid-template-columns:1fr;}
+      .moon{height:160px}
+      .left h1{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="left">
+      <div class="brand" style="margin-bottom:18px">
+        <div class="logo"><span>T</span></div>
+        <div>
+          <div style="font-weight:700">TARASHA LUXE</div>
+          <div style="font-size:13px;color:var(--muted)">Something awesome is coming</div>
+        </div>
+      </div>
+
+      <h1>We're launching soon</h1>
+      <p>We're putting the final touches on our site. Sign up below and we'll let you know the moment we go live.</p>
+
+      <div class="countdown" aria-hidden="true">
+        <div class="timebox"><strong id="days">00</strong><small>Days</small></div>
+        <div class="timebox"><strong id="hours">00</strong><small>Hours</small></div>
+        <div class="timebox"><strong id="minutes">00</strong><small>Minutes</small></div>
+        <div class="timebox"><strong id="seconds">00</strong><small>Seconds</small></div>
+      </div>
+
+      <div class="footer">Want early access or a demo? Reply to this page with your email or use the subscription box.</div>
+    </div>
+
+    <div class="right">
+      <div class="moon" role="img" aria-label="Illustration of a rocket">
+        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2c1.5 0 4 2 4 2s2 2.5 2 4-2 4-2 4-1.5 2.5-3 3-2.5 1-3 1-1-.5-3-1-3-3-3-3S6 8 6 6s2.5-4 2.5-4S10.5 2 12 2z" fill="rgba(255,255,255,0.9)"/>
+        </svg>
+        <div style="margin-top:10px;font-weight:700">Stay in the loop</div>
+        <div style="font-size:13px;color:var(--muted);text-align:center;max-width:280px">Be the first to know when we launch — no spam, just updates.</div>
+      </div>
+
+      <div class="subscribe">
+        <form id="subscribeForm">
+          <input type="email" id="email" placeholder="your@email.com" required />
+          <button type="submit">Notify me</button>
+        </form>
+        <div id="result" class="footer" style="display:none"></div>
+
+        <div class="social" aria-hidden="true">
+          <a href="#" title="Twitter" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 5.8c-.6.3-1.2.5-1.9.6.7-.4 1.2-1 1.4-1.8-.6.4-1.4.7-2.1.9C18.8 4.7 17.9 4 16.8 4c-1.9 0-3.4 1.7-3 3.5C10.7 7 8.2 6 6.3 4.5c-.9 1.6-.4 3.7 1.1 4.7-.5 0-1-.2-1.4-.4v.1c0 1.7 1.2 3.2 3 3.6-.4.2-.8.2-1.2.2-.3 0-.6 0-.9-.1.6 1.9 2.4 3.3 4.5 3.4C9 18 6.6 18.8 4 18.4c2 1.3 4.3 2 6.8 2 8.2 0 12.7-7 12.7-13v-.6c.9-.6 1.6-1.4 2.2-2.3-.8.4-1.6.7-2.5.8z" fill="rgba(255,255,255,0.9)"/></svg></a>
+          <a href="#" title="LinkedIn" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 9H3V21h3V9zM4.5 6.7C3.6 6.7 3 6 3 5.2S3.6 3.7 4.5 3.7 6 4.4 6 5.2 5.3 6.7 4.5 6.7zM21 21h-3v-6.2c0-3.1-3.5-2.9-3.5 0V21h-3V9h3v1.6c1.4-2.6 6-2.8 6 2.4V21z" fill="rgba(255,255,255,0.9)"/></svg></a>
+        </div>
+      </div>
+
+      <div style="font-size:13px;color:var(--muted);">Need help? Email <a href="mailto:hello@example.com" style="color:inherit;text-decoration:underline">hello@example.com</a></div>
+    </div>
+  </div>
+
+  <script>
+    // ===== Set your launch date here (YYYY-MM-DDTHH:MM:SS)
+    const launchDate = new Date('2025-12-01T00:00:00');
+
+    function updateCountdown(){
+      const now = new Date();
+      const diff = Math.max(0, launchDate - now);
+      const days = Math.floor(diff / (1000*60*60*24));
+      const hours = Math.floor((diff / (1000*60*60)) % 24);
+      const minutes = Math.floor((diff / (1000*60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById('days').textContent = String(days).padStart(2,'0');
+      document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Simple (frontend-only) subscribe handling.
+    document.getElementById('subscribeForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      // This demo just stores the email in localStorage and shows a success message.
+      // Replace with a real API call (e.g., POST to your backend) to collect emails.
+      const list = JSON.parse(localStorage.getItem('emails') || '[]');
+      if(!list.includes(email)) list.push(email);
+      localStorage.setItem('emails', JSON.stringify(list));
+
+      const result = document.getElementById('result');
+      result.style.display = 'block';
+      result.textContent = 'Thanks — we\'ll notify you at ' + email + '!';
+      this.reset();
+    });
+  </script>
+</body>
+</html>
